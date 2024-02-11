@@ -1,0 +1,27 @@
+<%-include("layout/header")%>
+
+
+<div class="ui unstackable items container segment">
+    <div class="ui huge header centered">Blogs</div>
+    <%blogs.forEach(function(blog){%>
+        <div class="ui item segment">
+          <div class="image">
+            <img src="<%=blog.image%>">
+          </div>
+          <div class="content">
+            <a class="header"><%=blog.title%></a>
+            <!-- <div class="meta">
+              <span>Description</span>
+            </div> -->
+            <div class="description">
+                <p><%- blog.body.substring(0,100)%>...</p>
+                <div><a class="positive ui button" href="/blogs/<%=blog._id%>">Read More</a></div>
+            </div>
+            <div class="extra">
+                <%=blog.created.toDateString()%>
+            </div>
+          </div>
+        </div>
+        <%})%>
+</div>
+<%-include("layout/footer")%>

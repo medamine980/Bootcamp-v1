@@ -1,0 +1,32 @@
+#progressBar{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    margin:10px auto;
+    width:40%;
+    height:40px;
+}
+#filledNumber{
+    position: absolute;
+    font-size: 14px;
+    width: 100%;
+    top:25%;
+    bottom:25%;
+    text-align: center;
+}
+#percent{
+    font-size: 16px;
+    margin:auto;
+}
+.outerDiv{
+    position: relative;
+    background: none;
+    border:1px solid black;
+    height:100%;
+    width:100%;
+}
+
+.innerDiv{
+    /* background-color: green; */
+    height: 100%;
+    width:0;
+}

@@ -1,0 +1,51 @@
+h1{
+	text-align: center;
+}
+table{
+	margin: auto;
+}
+td{	
+	width: 100px;
+	height: 100px;
+}
+#ALL{
+	border: 1px solid black;
+}
+.left{
+	border-bottom: 1px solid black;
+	border-top:1px solid black;
+	border-right: 1px solid black; 
+
+}
+.right{
+	border-bottom: 1px solid black;
+	border-left:1px solid black;
+	border-top: 1px solid black; 
+
+}
+.up{
+	border-bottom: 1px solid black;
+	border-left:1px solid black;
+	border-right: 1px solid black; 
+}
+.bottom{
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.left-up{
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+.left-bottom{
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+.right-up{
+	border-bottom: 1px solid black;
+	border-left:1px solid black;
+}
+.right-bottom{
+	border-left:1px solid black;
+	border-top: 1px solid black;
+}

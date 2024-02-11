@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic Data</title>
+    <link rel="stylesheet" href="./DB.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <header class="nav-brand">
+            <a href="#" style="color:#2a4158"><span style="color:rgba(10, 235, 255, 0.856);">
+                M</span>edic<span style="color:rgba(10, 235, 255, 0.856);">D</span>ata</a>
+        </header>
+        <a href="#" class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul class="nav-items">
+                    <ul class="nav-items drop-down">
+                        <li><a class="nav-item" href="#">Import(.txt)</a></li>
+                        <div class="drop-container">
+                            <input type="file" class="dropdown-item" id="importOldV" accept="text/plain"></a>
+                        </div>
+                    </ul>
+                <ul class="nav-items drop-down">
+                    <li><a class="nav-item" href="#" id="info">Info</a></li>
+                    <div class="drop-container">
+                        <a class="dropdown-item" href="#" 
+                        id="nav-disease"  onclick="createTable('diseases')">Disease</a>
+                        <a class="dropdown-item" href="#" 
+                        id="nav-symptoms" onclick="createTable('symptoms')">Symptoms</a>
+                        <a class="dropdown-item" href="#" 
+                        id="nav-risk-factor" onclick="createTable('risk factors')">Risk Factors</a>
+                        <a class="dropdown-item" href="#" 
+                        id="nav-treatment" onclick="createTable('treatments')">Treatments</a>
+                    </div>
+                </ul>
+                <li><a class="nav-item" id="copybtn" onclick="copy_dsdb()" href="#">
+                      Copy To Clipboard</a></li>
+                <li><a class="nav-item" style="color:#22272c;" onclick="deleteAllLS()" href="#">
+                        Delete All</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="table-container"></div>
+<main>
+    <div id="error-displayer"></div>
+    <div id="progressBar"></div>
+    <div class="container">
+        <label>Diseases:
+            <div style="display: inline-block;">
+                <input type="text" class="Diseases_input" maxlength="20">
+            </div>
+            <button id="dlt_disease" disabled>Delete</button>
+            <button id="check_disease" onclick="check()">Check</button>
+        </label>
+        <hr>    
+        <label id="symptoms_label">Main symptoms:
+            <div class="input_div_parent" id="symptom_taginput"></div>
+        </label>
+        <hr> 
+        <label id="symptoms2_label">Secondary symptoms:
+            <div class="input_div_parent" id="symptom2_taginput"></div>
+        </label>
+        <hr>    
+        <label id="rf_label">Risk Factor:
+            <div class="input_div_parent" id="rf_taginput"></div>
+        </label>
+        <hr>    
+        <label id="treatment_label">Treatment:
+            <div class="" id="treatment_taginput"></div>
+        </label>
+        <button id="Add">Add/Save</button>
+    </div>
+</main>
+</body>
+<script src="./DB.js"></script>
+</html>
